@@ -1,0 +1,15 @@
+# Core orchestration + model
+langgraph>=0.2.55
+langchain-core>=0.3.0
+
+# Model providers (install the one(s) you use; default is Anthropic).
+langchain-anthropic>=0.3.0     # PROVIDER=anthropic (Claude)
+langchain-google-genai>=2.0.0  # PROVIDER=google    (Gemini)
+
+# Scientific stack used by the agents
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+
+# Notebook (only needed to run the .ipynb)
+jupyter>=1.0
