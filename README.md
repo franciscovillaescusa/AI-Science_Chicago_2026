@@ -74,24 +74,11 @@ At startup it asks you for the analytic function used to **generate** the data
 default). The agents never see this formula — they must rediscover it from the
 noisy points. You can use `exp/log/sqrt/sin/cos/tan/tanh/pi/e` and `**`.
 
-**Notebook** (best for the live lecture):
+**Notebook**:
 
 ```bash
 jupyter notebook demo_notebook.ipynb
 ```
-
-## Knobs worth turning during the talk
-
-- Model/provider — see the table above (`LLM_PROVIDER` / `LLM_MODEL`); defaults to
-  Google `gemini-3.5-flash`. Edit `DEFAULT_MODELS` in `agentic_discovery.py` to change
-  the baked-in defaults.
-- `MAX_AUTO_REPAIRS` — how many times the Critic auto-retries when generated code crashes.
-- Dataset — by default you **type the data-generating formula** at startup
-  (`make_from_expression(...)`, default = a damped oscillation). Ready-made example
-  formulas live in `EXAMPLE_EXPRS` (feed any to `make_from_expression(...)`):
-  `trend_plus_oscillation` (dominant trend + small oscillation — a line fits at a
-  deceptively-high R²≈0.97 but leaves periodic residuals), `double_exponential`
-  (equifinality demo), and `damped_oscillation`.
 
 ## Note on safety
 
