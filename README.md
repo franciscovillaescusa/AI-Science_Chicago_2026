@@ -4,6 +4,8 @@ A 1-hour, tutorial-style demo for the **AI + Science** summer school (Chicago, 2
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/franciscovillaescusa/AI-Science_Chicago_2026/blob/main/agentic_discovery_colab.ipynb)
 
+Slides associated to this tutorial: [slides](https://github.com/franciscovillaescusa/AI-Science_Chicago_2026/blob/main/Chicago_June_2026_tutorial.pdf)
+
 # Goal
 
 You hand the system **noisy data** from a hidden formula. A small team of agents then
