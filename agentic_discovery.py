@@ -4,7 +4,7 @@ agentic_discovery.py
 A minimal multi-agent system that discovers the equation hidden in
 noisy data, built with LangGraph + Claude.
 
-Tutorial: "AI in Science" summer school (Chicago, 2026).
+Tutorial: "AI + Science" summer school (Chicago, 2026).
 
 The point of this file is *pedagogical*: it shows, in as little code
 as possible, the features that make an "agentic" system more than
