@@ -2,6 +2,10 @@
 
 A 1-hour, tutorial-style demo for the **AI in Science** summer school (Chicago, 2026).
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/franciscovillaescusa/AI-Science_Chicago_2026/blob/main/agentic_discovery_colab.ipynb)
+
+▶️ **Run it now, no setup:** [open `agentic_discovery_colab.ipynb` in Google Colab](https://colab.research.google.com/github/franciscovillaescusa/AI-Science_Chicago_2026/blob/main/agentic_discovery_colab.ipynb).
+
 You hand the system **noisy data** from a hidden formula. A small team of agents then
 recovers the underlying equation — illustrating the features that distinguish an
 *agentic* system from a single LLM call:
@@ -30,6 +34,7 @@ Debugger repairs it first.
 | File | What it is |
 |---|---|
 | `agentic_discovery.py` | The agents + the LangGraph graph. Run it for a terminal demo. |
+| `agentic_discovery_colab.ipynb` | One-click [Google Colab](https://colab.research.google.com/github/franciscovillaescusa/AI-Science_Chicago_2026/blob/main/agentic_discovery_colab.ipynb) runner — installs deps, fetches the script, runs it. |
 | `demo_notebook.ipynb` | Step-by-step walkthrough for the live lecture. |
 | `requirements.txt` | Dependencies. |
 | `plots/` | Fit plots written by the Plotter agent (created on first run). |
