@@ -40,33 +40,36 @@ Debugger repairs it first.
 | `plots/` | Fit plots written by the Plotter agent (created on first run). |
 | `code/` | The Python the Coder writes each iteration (plus the Debugger's repairs), saved one file per attempt. |
 
-## Setup
+## Running it
+
+There are two ways to run the demo. Both end up running the same `agentic_discovery.py`;
+pick **Colab** if you want zero local setup, or **Local** if you want to run on your own
+machine. See [Configuration](#configuration) below to switch model provider.
+
+### Run on Google Colab (no install)
+
+1. Open the notebook in Colab — click the **Open in Colab** badge above, or this link:
+   [agentic_discovery_colab.ipynb](https://colab.research.google.com/github/franciscovillaescusa/AI-Science_Chicago_2026/blob/main/agentic_discovery_colab.ipynb).
+2. Run the cells **top to bottom**. They install the dependencies, download
+   `agentic_discovery.py` from this repo, ask for your API key, and start the demo —
+   nothing to upload.
+3. Provide your API key when asked: either add it as a Colab **Secret** named
+   `GOOGLE_API_KEY` (the key icon in the left sidebar), or paste it into the prompt.
+4. At the prompt, type the formula used to generate the data (or press Enter for the
+   default), then answer *improve* / *stop* in the input boxes as it iterates.
+
+> To use Claude instead of Gemini, set `PROVIDER = "anthropic"` in the provider cell
+> and supply an `ANTHROPIC_API_KEY` secret.
+
+### Run locally
+
+**Setup:**
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 export GOOGLE_API_KEY=...        # your Google (Gemini) API key
 ```
-
-### Choosing the model provider
-
-The default backend is **Google (Gemini)**. To use **Anthropic (Claude)** instead,
-set the API key and pick the provider at runtime — no code edit needed:
-
-```bash
-export ANTHROPIC_API_KEY=...
-LLM_PROVIDER=anthropic python agentic_discovery.py
-```
-
-| Env var | Meaning | Default |
-|---|---|---|
-| `LLM_PROVIDER` | `google` or `anthropic` | `google` |
-| `LLM_MODEL` | override the model | `gemini-3.5-flash` / `claude-opus-4-8` |
-| `LLM_MAX_TOKENS` | max output tokens per call (must fit the Coder's full code; thinking models also spend it) | `16384` |
-
-Both default models support vision (the Critic is shown the fit plot) and structured output.
-
-## Run
 
 **Terminal demo** (prompts you to improve/stop at each step):
 
@@ -79,11 +82,33 @@ At startup it asks you for the analytic function used to **generate** the data
 default). The agents never see this formula — they must rediscover it from the
 noisy points. You can use `exp/log/sqrt/sin/cos/tan/tanh/pi/e` and `**`.
 
-**Notebook**:
+**Step-by-step notebook** (the version used in the live lecture):
 
 ```bash
 jupyter notebook demo_notebook.ipynb
 ```
+
+## Configuration
+
+The default backend is **Google (Gemini)**. To use **Anthropic (Claude)** instead, set
+the matching API key and pick the provider — no code edit needed.
+
+- **Locally:** set it via env vars at runtime:
+
+  ```bash
+  export ANTHROPIC_API_KEY=...
+  LLM_PROVIDER=anthropic python agentic_discovery.py
+  ```
+
+- **In Colab:** set `PROVIDER = "anthropic"` in the provider cell instead.
+
+| Env var | Meaning | Default |
+|---|---|---|
+| `LLM_PROVIDER` | `google` or `anthropic` | `google` |
+| `LLM_MODEL` | override the model | `gemini-3.5-flash` / `claude-opus-4-8` |
+| `LLM_MAX_TOKENS` | max output tokens per call (must fit the Coder's full code; thinking models also spend it) | `16384` |
+
+Both default models support vision (the Critic is shown the fit plot) and structured output.
 
 ## Note on safety
 
