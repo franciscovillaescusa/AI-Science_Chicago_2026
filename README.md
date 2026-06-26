@@ -1,10 +1,10 @@
 # Agentic equation discovery — LangGraph + Claude
 
-A 1-hour, tutorial-style demo for the **AI in Science** summer school (Chicago, 2026).
+A 1-hour, tutorial-style demo for the **AI + Science** summer school (Chicago, 2026).
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/franciscovillaescusa/AI-Science_Chicago_2026/blob/main/agentic_discovery_colab.ipynb)
 
-▶️ **Run it now, no setup:** [open `agentic_discovery_colab.ipynb` in Google Colab](https://colab.research.google.com/github/franciscovillaescusa/AI-Science_Chicago_2026/blob/main/agentic_discovery_colab.ipynb).
+# Goal
 
 You hand the system **noisy data** from a hidden formula. A small team of agents then
 recovers the underlying equation — illustrating the features that distinguish an
